@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "Vibes Matched",
+    "slug": "vibes-matched",
+    "scheme": "vibesmatched",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#CC5500"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "audio",
+          "location"
+        ],
+        "NSLocationWhenInUseUsageDescription": "We need your location to provide accurate workout tracking.",
+        "NSMotionUsageDescription": "We track your activity to match music to your workout intensity.",
+        "NSHealthShareUsageDescription": "We need access to your heart rate data to match music to your workout intensity and track your performance.",
+        "NSHealthUpdateUsageDescription": "We save your workout data to Apple Health so you can track your progress over time."
+      },
+      "entitlements": {
+        "com.apple.developer.healthkit": true,
+        "com.apple.developer.healthkit.access": []
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "react-native-health",
+      "expo-web-browser"
+    ]
+  }
+}
